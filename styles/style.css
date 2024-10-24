@@ -3,3 +3,39 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+  width: 99%;
+  height: 35%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: end;
+}
+
+.header__theme-menu {
+  font-weight: 400;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-items: center; /* Выровнял позиции списка по центру */
+  list-style-type: none;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button:has(:hover) {
+  border: 1px;
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  border-bottom: 1px;
+}
+
+.decorated-zone {
+
+}
