@@ -1,41 +1,112 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: 'IBM Plex mono', 'Times New Roman', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: currentColor;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
-  width: 99%;
-  height: 35%;
   display: grid;
   grid-template-columns: auto;
   justify-content: end;
 }
 
+.header__decorative-element {
+  font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
+  justify-self: end;
+  margin-right: 1.8rem;
+  letter-spacing: 0.015rem;
+}
+
+.header__decorative-ellipse /*нужно скрыть его при определенной ширине экрана*/ {
+  position: absolute;
+  justify-self: end;
+  height: 24px;
+  width: 24px;
+  margin: 1px 1px;
+  border-style: solid solid none none;
+  border-color: #FF0070;
+  background-image: url("../images/header-ellipse.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .header__theme-menu {
-  font-weight: 400;
+  display: grid;
+  justify-items: center; /* Выровнял позиции списка по центру */
+  margin-block-start: 20%;
 }
 
 .header__theme-menu-list {
-  display: grid;
-  justify-items: center; /* Выровнял позиции списка по центру */
   list-style-type: none;
+}
+
+.header__theme-menu-item {
+  line-height: 2.3rem;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
+  text-transform: lowercase;
+  font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
+  font-family: 'IBM Plex mono', 'Times New Roman', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.015rem;
+  border: solid;
+  width: 4.4rem;
 }
 
-.header__theme-menu-button:has(:hover) {
-  border: 1px;
+.header__theme-menu-button:hover {
+  border: 1px solid;
 }
 
 .header__theme-menu-button:focus {
-  border: none;
-  border-bottom: 1px;
+  border-bottom: 1px solid;
 }
 
-.decorated-zone {
-
+/*
+.background-decorated-zone {
+  height: 110%;
+  width: 110%;
+  background-image: url("../images/cover-image-dark.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
 }
+  */
+
+.main-page__title {
+  text-transform: lowercase;
+  font-size: clamp(0.0625rem, 0.0433rem + 30.7487vw, 7.25rem);
+  line-height: 6rem;
+  text-shadow: 0.3rem 0.3rem #FF0070;  /*можно оставить? это постоянная штука*/
+  margin-block-start: 0.36em;
+  margin-block-end: 0.47em;
+}
+
+.main-page__text {
+  line-height: 1.5rem;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
+  background-color: #FF0070; /*сделать переменной*/
+}
+
+.main__decorative-bottom-element {
+  position: absolute;
+  justify-self: start;
+  height: 24px;
+  width: 24px;
+  border-style: none none solid solid;
+  border-color: #FF0070;
+  margin-top: 3.5%;
+}
+
+.content {
+  margin-block-start: 6.6em;
+}
+
+.
