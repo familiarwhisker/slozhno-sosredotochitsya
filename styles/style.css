@@ -3,6 +3,7 @@
 .page {
   font-family: 'IBM Plex mono', 'Times New Roman', sans-serif;
   margin: 0.6em;
+  background-image: var(--page-bg-image);
   background-repeat: no-repeat;
   background-position: top;
   background-size: auto 100vh;
@@ -10,14 +11,6 @@
   background-color: var(--background-color);
   background-blend-mode: luminosity;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-}
-
-theme-dark.page {
-  background-image: url("../images/cover-image-dark.png");
-}
-
-theme-light .page {
-  background-image: url("../images/cover-image-light.png");
 }
 
 .header {
