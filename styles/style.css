@@ -13,16 +13,10 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.header {
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: end;
-}
-
-/* Ниже
-Элементы с абсолютным поз. которые скрываются при изменении ширины экрана*/
+/* Декоративные элементы (header)*/
 
 .header__decorative-element {
+  display: var(--decorative-element-text);
   position: absolute;
   font-size: var(--header-text-size);
   color: var(--content-title-color);
@@ -46,8 +40,25 @@
   background-position: center;
 }
 
-/* Выше
-Элементы с абсолютным поз. которые скрываются при изменении ширины экрана*/
+@media (min-width: 768px) {
+  .header__decorative-element {
+    margin-right: 2.4rem;
+    margin-top: 0.8rem;
+  }
+  
+  .header__decorative-ellipse {
+    margin-right: 0.6rem;
+    margin-top: 0.6rem;
+  }
+}
+
+/*Header*/
+
+.header {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: end;
+}
 
 .header__theme-menu {
   display: grid;
@@ -55,8 +66,20 @@
   margin-block-start: 6.5vh;
 }
 
+@media (min-width: 768px) {
+  .header__theme-menu {
+      margin-block-start: 24vh;
+  }
+}
+
 .header__theme-menu-list {
   list-style-type: none;
+}
+
+@media (min-width: 768px) {
+  .header__theme-menu-list {
+    padding-inline-end: 0.7rem;
+  }
 }
 
 .header__theme-menu-item {
@@ -77,7 +100,7 @@
 
 .header__theme-menu-button:active {
   outline: 2px solid;
-  /* pointer-events: none; В уроке так. Не поняла, что за класс _active  */
+  /* pointer-events: none; В уроке так. Не поняла, что за "класс _active". Работает так  */
 }
 
 .header__theme-menu-button:hover {
@@ -92,6 +115,8 @@
   border-bottom: 1px solid;
 }
 
+/*Основная страница*/
+
 .main-page__title {
   text-transform: lowercase;
   font-size: clamp(0.0625rem, 0.0438rem + 29.9465vw, 7.0625rem);
@@ -103,6 +128,14 @@
   letter-spacing: 0.1rem;
 }
 
+@media (min-width: 768px) {
+  .main-page__title {
+    margin-block-start: 1.35em;
+    margin-inline-start: -0.5rem; /*Без этого отступа (с 0) не по макету*/
+    letter-spacing: 0.25rem;
+  }
+}
+
 .main-page__text {
   line-height: 1.5rem;
   letter-spacing: var(--letter-spacing-main);
@@ -112,8 +145,21 @@
   font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
 }
 
-/* Ниже
-Элементы с абсолютным поз. которые скрываются при изменении ширины экрана*/
+@media (min-width: 768px) {
+  .main-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-block-start: 9em;
+    margin-inline-end: 0.7em;
+    gap: 0.5em;
+  }
+
+  .main-page__text {
+    grid-column-start: 2;
+  }
+}
+
+/* Декоративные элементы (основная)*/
 
 .main-page__decorative-bottom-element {
   position: absolute;
@@ -125,8 +171,7 @@
   margin-top: 3.5%;
 }
 
-/* Выше
-Элементы с абсолютным поз. которые скрываются при изменении ширины экрана*/
+/*Контент*/
 
 .content {
   margin-block-start: 6.6em;
@@ -191,6 +236,8 @@
   padding: 0rem 0.3rem 0.2rem 0.3rem;
 }
 
+/*Галерея*/
+
 .gallery {
   margin-block-start: 2.85em;
 }
@@ -216,6 +263,8 @@
   max-width: 100%;
 }
 
+/*Footer*/
+
 .footer {
   display: grid;
   margin-block-start: 3em;
@@ -234,6 +283,8 @@
   justify-self: center;
   align-self: center;
 }
+
+/*Декоративные элементы (footer)*/
 
 .footer__decorative-element {
   position: absolute;

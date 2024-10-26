@@ -13,6 +13,7 @@
 --header-text-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
 --content-font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
 --letter-spacing-main: 0.01rem;
+--decorative-element-text: block;
 --decorative-element-bg-img: url("../images/header-ellipse.png");
 --page-bg-image: url("../images/cover-image-dark.png");
 }

@@ -15,6 +15,7 @@
   --accent-text-color: #000028;
   --content-text-color: #F1B2CE;
   --content-title-color: #FF0070;
+  --decorative-element-text: block;
   --decorative-element-bg-img: url("../images/header-ellipse.png");
   --page-bg-image: url("../images/cover-image-dark.png");
 }
