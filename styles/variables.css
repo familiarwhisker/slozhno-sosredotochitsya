@@ -4,10 +4,12 @@
 */
 
 :root {
+--background-color: #000028;
 --header-text-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
 --accent-color: #FF0070;
 --main-page-title-color: #DB00FF;
 --accent-text-color: #000028;
 --content-text-color: #F1B2CE;
 --content-font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
+--letter-spacing-main: 0.01rem;
 }
