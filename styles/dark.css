@@ -9,5 +9,11 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-color: #000028;
   --accent-color: #FF0070;
+  --main-page-title-color: #DB00FF;
+  --accent-text-color: #000028;
+  --content-text-color: #F1B2CE;
+  --content-title-color: #FF0070;
+  --decorative-element-bg-img: url("../images/header-ellipse.png");
 }
