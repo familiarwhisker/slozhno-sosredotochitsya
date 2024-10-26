@@ -45,7 +45,7 @@
     margin-right: 2.4rem;
     margin-top: 0.8rem;
   }
-  
+
   .header__decorative-ellipse {
     margin-right: 0.6rem;
     margin-top: 0.6rem;
@@ -68,7 +68,7 @@
 
 @media (min-width: 768px) {
   .header__theme-menu {
-      margin-block-start: 24vh;
+    margin-block-start: 24vh;
   }
 }
 
@@ -168,7 +168,14 @@
   width: 24px;
   border-style: none none solid solid;
   border-color: var(--content-title-color);
-  margin-top: 3.5%;
+  margin-top: 3.5%;                                    /*Поправить на em*/
+}
+
+@media (min-width: 768px) {
+  .main-page__decorative-bottom-element {
+    margin-top: 7.42em;
+    margin-left: 0.7em;
+  }
 }
 
 /*Контент*/
@@ -177,6 +184,18 @@
   margin-block-start: 6.6em;
   line-height: 1.475rem;
 }
+
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    gap: 1.5em;
+    margin-inline: 0.7em;
+    margin-block-start: 13em;
+  }
+}
+
+                            /*дальше сделать св для параграфов grid-column-start */
 
 .content__title {
   font-size: var(--content-font-size);
@@ -306,4 +325,3 @@
   border-color: var(--accent-color);
   margin-bottom: 0.4em;
 }
-

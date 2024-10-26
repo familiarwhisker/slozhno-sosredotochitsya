@@ -26,11 +26,10 @@
     --accent-color: #FF8DCB;
     --main-page-title-color: #FFC2E6;
     --accent-text-color: #353430;
-    --content-text-color: #353430;  
+    --content-text-color: #353430;
     --content-title-color: #353430;
     --decorative-element-text: none;
     --decorative-element-bg-img: none;
     --page-bg-image: url("../images/cover-image-light.png");
-    }
+  }
 }
-
