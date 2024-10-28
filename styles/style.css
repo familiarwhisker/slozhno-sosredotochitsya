@@ -8,9 +8,12 @@
   background-blend-mode: luminosity;
   background-attachment: fixed;
   background-clip: content-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+  height: inherit;
+  display: grid;
 }
 
 /* Декоративные элементы (header)*/
@@ -52,17 +55,13 @@
   }
 }
 
-/*Header*/
-
-.header {
-  height: inherit;
-  display: grid;
-}
+/*Далее header*/
 
 .header__theme-menu {
   display: grid;
   grid-template-columns: auto;
   justify-content: end;
+  padding-top: 2.7rem;
 }
 
 .header__theme-menu-list {
@@ -111,28 +110,28 @@
   border-bottom: 1px solid;
 }
 
-/*Основная страница*/
+/*Banner*/
 
-.main-page__title {
+.banner__title {
   text-transform: lowercase;
   font-size: clamp(0.0625rem, 0.0438rem + 29.9465vw, 7.0625rem);
   line-height: 6rem;
-  color: var(--main-page-title-color);
+  color: var(--banner-title-color);
   text-shadow: 0.3rem 0.3rem var(--accent-color);
-  margin-block-start: 0.38em;
+  margin-block-start: 0.4em;
   margin-block-end: 0.47em;
   letter-spacing: 0.1rem;
 }
 
 @media (min-width: 768px) {
-  .main-page__title {
+  .banner__title {
     margin-block-start: 1.35em;
     margin-inline-start: -0.5rem; /*Без этого отступа (с 0) не по макету*/
     letter-spacing: 0.25rem;
   }
 }
 
-.main-page__text {
+.banner__text {
   line-height: 1.5rem;
   letter-spacing: var(--letter-spacing-main);
   font-weight: 700;
@@ -142,7 +141,7 @@
 }
 
 @media (min-width: 768px) {
-  .main-page {
+  .banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-block-start: 9em;
@@ -150,25 +149,26 @@
     gap: 0.5em;
   }
 
-  .main-page__text {
+  .banner__text {
     grid-column-start: 2;
   }
 }
 
-/* Декоративные элементы (основная)*/
+/* Декоративные элементы (баннер)*/
 
-.main-page__decorative-bottom-element {
+.banner__decorative-bottom-element {
   position: absolute;
   justify-self: start;
   height: 24px;
   width: 24px;
   border-style: none none solid solid;
   border-color: var(--content-title-color);
-  margin-top: 3.5%;                                    /*Поправить на em*/
+  margin-top: 3.4%;                                    /*Поправить на em*/
+  margin-left: 0.1em;
 }
 
 @media (min-width: 768px) {
-  .main-page__decorative-bottom-element {
+  .banner__decorative-bottom-element {
     margin-top: 7.42em;
     margin-left: 0.7em;
   }
@@ -178,6 +178,7 @@
 
 .content {
   line-height: 1.475rem;
+  margin-block-start: 5.5rem;
 }
 
 @media (min-width: 768px) {
@@ -197,6 +198,14 @@
   color: var(--content-title-color);
 }
 
+.content__title:nth-of-type(2) {
+  margin-block-start: 2.9em;
+}
+
+.content__title:nth-of-type(3) {
+  margin-block-start: 1.6em;
+}
+
 @media (min-width: 768px) {
   .content__title {
     grid-row: span 3;
@@ -213,7 +222,7 @@
   background-color: var(--accent-color);
   font-size: var(--content-font-size);
   letter-spacing: var(--letter-spacing-main);
-  margin-block-start: 0.5em;
+  margin-block-start: 0.2em;
   margin-block-end: 0em;
 }
 
@@ -228,7 +237,7 @@
   background-color: var(--accent-color);
   font-size: var(--content-font-size);
   letter-spacing: var(--letter-spacing-main);
-  margin-block-start: 0.5em;
+  margin-block-start: 1.1em;
   margin-block-end: 0em;
   font-weight: 100;
 }
@@ -240,7 +249,7 @@
 }
 
 .content__accent-subtitle:first-of-type {
-  margin-block-start: 1.1em;
+  margin-block-start: 1.2em;
 }
 
 @media (min-width: 768px) {
@@ -252,7 +261,10 @@
 .content__text {
   color: var(--content-text-color);
   margin-block-start: 0.5em;
+  margin-block-end: 1em;
   font-size: var(--content-font-size);
+  line-height: 1.3em;
+  width: 98%;
 }
 
 @media (min-width: 768px) {
@@ -263,8 +275,13 @@
 
 .content__full-width {
   display: grid;
-  grid-column: span 2;
-  row-gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .content__full-width {
+    grid-column: span 2;
+    row-gap: 0.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -307,7 +324,7 @@
 /*Галерея*/
 
 .gallery {
-  margin-block-start: 2.85em;
+  display: grid;
 }
 
 .gallery__accent-title {
@@ -315,8 +332,8 @@
   background-color: var(--accent-color);
   font-size: var(--content-font-size);
   letter-spacing: var(--letter-spacing-main);
-  margin-block-start: 2.8em;
-  margin-block-end: 0.6em;
+  margin-block-start: 2em;
+  margin-block-end: 0.7em;
   max-width: 100vw;
 }
 
@@ -325,6 +342,7 @@
   grid-template-columns: 100vw;
   grid: auto-flow / 1fr;
   gap: 0.6em;
+  margin: 0px 2px 0px 2px;
 }
 
 .gallery__image {
@@ -343,7 +361,7 @@
   text-transform: lowercase;
   font-size: clamp(0.0625rem, 0.0438rem + 29.9465vw, 7.0625rem);
   line-height: 6rem;
-  color: var(--main-page-title-color);
+  color: var(--banner-title-color);
   text-shadow: 0.1rem 0.1rem var(--accent-color);
   margin-block-start: 0em;
   margin-block-end: 0em;
