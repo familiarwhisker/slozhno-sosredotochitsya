@@ -14,6 +14,7 @@
 .header {
   height: inherit;
   display: grid;
+  min-height: 100vh;
 }
 
 /* Декоративные элементы (header)*/
@@ -61,7 +62,7 @@
   display: grid;
   grid-template-columns: auto;
   justify-content: end;
-  padding-top: 2.7rem;
+  padding-top: 3rem;
 }
 
 .header__theme-menu-list {
@@ -75,10 +76,6 @@
     margin-block-start: 24vh;
     padding-inline-end: 0.7rem;
   }
-}
-
-.header__theme-menu-item {
-  line-height: 2.3rem;
 }
 
 .header__theme-menu-button {
@@ -118,7 +115,7 @@
   line-height: 6rem;
   color: var(--banner-title-color);
   text-shadow: 0.3rem 0.3rem var(--accent-color);
-  margin-block-start: 0.4em;
+  margin-block-start: 0.17em;
   margin-block-end: 0.47em;
   letter-spacing: 0.1rem;
 }
@@ -178,7 +175,7 @@
 
 .content {
   line-height: 1.475rem;
-  margin-block-start: 5.5rem;
+  margin-block-start: 2em;
 }
 
 @media (min-width: 768px) {
@@ -355,6 +352,9 @@
   display: grid;
   margin-block-start: 3em;
   height: inherit;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
 }
 
 .footer__title {
@@ -366,8 +366,6 @@
   margin-block-start: 0em;
   margin-block-end: 0em;
   letter-spacing: 0.1rem;
-  justify-self: center;
-  align-self: center;
 }
 
 /*Декоративные элементы (footer)*/
