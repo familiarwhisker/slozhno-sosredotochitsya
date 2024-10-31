@@ -1,0 +1,89 @@
+
+@media (min-width: 768px) {
+    .header__decorative-element {
+        margin-right: 2.4rem;
+        margin-top: 0.8rem;
+      }
+
+      .header__decorative-ellipse {
+        margin-right: 0.6rem;
+        margin-top: 0.6rem;
+      }
+
+      .header__theme-menu-list {
+        margin-block-start: 24vh;
+        padding-inline-end: 0.7rem;
+      }
+
+      .banner__title {
+          margin-block-start: 1.35em;
+          margin-inline-start: -0.5rem; /*Без этого отступа (с 0) не по макету*/
+          letter-spacing: 0.25rem;
+      }
+
+      .banner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-block-start: 9em;
+        margin-inline-end: 0.7em;
+        gap: 0.5em;
+      }
+
+      .banner__text {
+        grid-column-start: 2;
+      }
+
+      .banner__decorative-bottom-element {
+        margin-top: 7.42em;
+        margin-left: 0.7em;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 32% 1fr;
+        gap: 1.5em;
+        row-gap: 0.2em;
+        margin-inline: 0.7em;
+        margin-block-start: 14em;
+      }
+
+      .content__title {
+        grid-row: span 3;
+      }
+
+      .content__accent-title {
+        grid-column: 2;
+      }
+
+      .content__accent-subtitle {
+        max-height: min-content;
+        grid-column: 2;
+      }
+
+      .content__text {
+        grid-column: 2;
+      }
+
+      .content__full-width {
+        grid-column: span 2;
+        row-gap: 0.25rem;
+      }
+
+      .content__title {
+        margin-block-start: 0em;
+      }
+
+      .content__text {
+        margin-block-start: 0.2em;
+      }
+
+      .content__accent-title {
+        margin-block-start: 0em;
+      }
+
+      .content__accent-subtitle {
+        margin-block-start: 0em;
+      }
+
+
+}
