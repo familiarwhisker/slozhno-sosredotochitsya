@@ -1,89 +1,146 @@
 
 @media (min-width: 768px) {
     .header__decorative-element {
-        margin-right: 2.4rem;
-        margin-top: 0.8rem;
-      }
+        margin-right: 1.8rem;
+        margin-top: 0rem;
+    }
 
-      .header__decorative-ellipse {
-        margin-right: 0.6rem;
-        margin-top: 0.6rem;
-      }
+    .header__theme-menu-list {
+        margin-block-start: 10.4vh;
+    }
 
-      .header__theme-menu-list {
-        margin-block-start: 24vh;
-        padding-inline-end: 0.7rem;
-      }
+    .header__theme-menu {
+        height: 1em;
+    }
 
-      .banner__title {
-          margin-block-start: 1.35em;
-          margin-inline-start: -0.5rem; /*Без этого отступа (с 0) не по макету*/
-          letter-spacing: 0.25rem;
-      }
-
-      .banner {
+    .banner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-block-start: 9em;
-        margin-inline-end: 0.7em;
         gap: 0.5em;
-      }
+    }
 
-      .banner__text {
+    .banner__title {
+        margin-inline-start: -1rem;
+        letter-spacing: 0.25rem;
+        margin-block-end: 0;
+        margin-block-start: 1.5em;
+    }
+
+    .banner__text {
         grid-column-start: 2;
-      }
+        margin-block-start: 9em;
+    }
 
-      .banner__decorative-bottom-element {
-        margin-top: 7.42em;
-        margin-left: 0.7em;
-      }
+    .banner__decorative-bottom-element {
+        margin-top: 8.7em;
+    }
 
-      .content {
+    .content {
         display: grid;
         grid-template-columns: 32% 1fr;
         gap: 1.5em;
         row-gap: 0.2em;
-        margin-inline: 0.7em;
-        margin-block-start: 14em;
-      }
+        margin-block-start: 2.5em;
+    }
 
-      .content__title {
+    .content__title {
         grid-row: span 3;
-      }
+        margin-block-start: 0em;
+    }
 
-      .content__accent-title {
+    .content__title:nth-of-type(2) {
+        margin-block-start: 3.3em;
+    }
+
+    .content__title:nth-of-type(3) {
+        margin-block-start: 0;
+    }
+
+    .content__accent-title {
         grid-column: 2;
-      }
+        margin-block-start: 0em;
+    }
 
-      .content__accent-subtitle {
+    .content__accent-subtitle {
         max-height: min-content;
         grid-column: 2;
-      }
+        margin-block-start: 0em;
+    }
 
-      .content__text {
+    .content__accent-subtitle:first-of-type {
+        margin-block-start: 0.8em;
+    }
+
+    .content__text {
         grid-column: 2;
-      }
+        width: 100%;
+        margin-block-end: 0.8em;
+    }
 
-      .content__full-width {
+    .content__full-width {
         grid-column: span 2;
-        row-gap: 0.25rem;
-      }
+        row-gap: 0.15rem;
+        margin-block-end: 4em;
+    }
 
-      .content__title {
-        margin-block-start: 0em;
-      }
+    .gallery {
+        max-height: 88.7vh;
+    }
 
-      .content__text {
-        margin-block-start: 0.2em;
-      }
+    .gallery__accent-title {
+        margin-block-start: 3.5em;
+    }
 
-      .content__accent-title {
-        margin-block-start: 0em;
-      }
+    .gallery__pictures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        margin-block-start: 0.6rem;
+        max-height: 75%;
+    }
 
-      .content__accent-subtitle {
-        margin-block-start: 0em;
-      }
+    .gallery__pictures > img:first-child {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
 
+    .gallery__pictures > img:last-child {
+        grid-column: 2 / 4;
+        grid-row: 3;
+    }
 
+    .gallery__pictures > img:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+
+    .gallery__pictures > img:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2 / 4;
+    }
+
+    .gallery__pictures > img:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .gallery__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .footer__title {
+        letter-spacing: 0.2rem;
+    }
+
+    .footer__decorative-element {
+        margin: 15px 1px;
+    }
+
+    .footer__decorative-bottom-element {
+        margin-bottom: 1.3em;
+    }
 }
