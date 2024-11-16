@@ -59,8 +59,4 @@
   .footer__title {
     font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
   }
-
-  .footer__decorative-element {
-
-  }
 }
