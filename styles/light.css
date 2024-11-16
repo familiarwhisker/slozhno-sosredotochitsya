@@ -18,6 +18,7 @@
   --decorative-element-text: none;
   --decorative-element-bg-img: none;
   --page-bg-image: url("../images/cover-image-light.png");
+  --banner-title-color: #FFC2E6;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,5 +32,6 @@
     --decorative-element-text: none;
     --decorative-element-bg-img: none;
     --page-bg-image: url("../images/cover-image-light.png");
+    --banner-title-color: #FFC2E6;
   }
 }
