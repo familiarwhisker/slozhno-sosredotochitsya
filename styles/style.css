@@ -14,6 +14,7 @@
 .header {
   display: grid;
   height: 100vh;
+  max-height: 41.8em;
 }
 
 /* Декоративные элементы (header and footer)*/
@@ -101,7 +102,6 @@
 
 .header__theme-menu-button:active {
   outline: 2px solid;
-  /* pointer-events: none; В уроке так. Не поняла, что за "класс _active". Работает так  */
 }
 
 .header__theme-menu-button:hover {
@@ -116,11 +116,16 @@
   border-bottom: 1px solid;
 }
 
+.header__theme-menu-button_active {
+  outline: 1px solid;
+  pointer-events: none;
+}
+
 /*Banner*/
 
 .banner {
   height: fit-content;
-  margin-block-start: 5.5rem;
+  margin-block-start: 5.2rem;
 }
 
 .banner__title {
@@ -254,6 +259,7 @@
   display: grid;
   margin-block-start: 3em;
   height: 100vh;
+  max-height: 41.8em;
   justify-content: center;
   align-content: center;
 }
@@ -272,7 +278,11 @@
 
 @media (min-width: 600px) {
   .page {
-    padding-right: 2.3rem;
+    padding-right: 1.2rem;
+  }
+
+  .header {
+    max-height: none;
   }
 
   .decorated-zone::after {
@@ -297,17 +307,13 @@
     margin-inline-start: -1rem;
     letter-spacing: 0.25rem;
     grid-column: span 2;
-    margin-block-start: 5.5rem;
+    margin-block-start: 6rem;
   }
 
   .banner__text {
     grid-column-start: 2;
-    margin-block-start: 6.4rem;
+    margin-block-start: 6rem;
     margin-inline-start: -0.4rem;
-  }
-
-  .banner__decorative-bottom-element {
-    margin-top: 8.7em;
   }
 
   .content {
@@ -413,6 +419,10 @@
     object-position: center;
   }
 
+  .footer {
+    max-height: none;
+  }
+
   .footer__title {
     letter-spacing: 0.2rem;
     padding-bottom: 2rem;
@@ -437,10 +447,11 @@
   .header__theme-menu {
     justify-content: center;
     align-content: start;
-    margin-block-start: 0;
+    margin-block-start: -0.8rem;
   }
 
   .header__theme-menu-list {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-block-start: 0;
     gap: 0.6em;
@@ -448,24 +459,27 @@
 
   .banner__title {
     font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
-    margin-block-start: 1em;
+    margin-block-start: 4.6rem;
+    margin-inline-start: -1.2rem;
     letter-spacing: 0rem;
   }
 
   .banner__text {
-    margin-block-start: 6.5em;
+    margin-block-start: 2.9em;
   }
 
-  .banner__decorative-bottom-element {
-    margin-top: 5em;
+  .content {
+    grid-template-columns: 31.5% 1fr;
   }
 
   .content__row-view {
     display: grid;
+    place-self: center;
     gap: 20px;
     padding-top: 0;
-    grid-template-columns: repeat(3, minmax(200px, 314px));
-    max-width: 984px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+    width: 100%;
   }
 
   .content-column {
@@ -477,17 +491,27 @@
   }
 
   .gallery {
-    width: 96vw;
-    max-height: 1091px;
+    width: 100%;
+    height: fit-content;
   }
 
   .footer {
     position: relative;
     display: grid;
-    margin-block-start: 7.8em;
+    margin-block-start: -210px;
   }
 
   .footer__title {
-    font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
+    font-size: clamp(9.8125rem, -1.2968rem + 17.3583vw, 31.25rem);
+    letter-spacing: 0.08rem;
+    padding-bottom: 2.2rem;
+  }
+}
+
+/* Сохранение адаптивности для больших экранов */
+@media (min-height: 1200px) {
+  .footer {
+    height: auto;
+    min-height: 50vh;
   }
 }
