@@ -1,1 +1,1 @@
-(https://github.com/familiarwhisker/slozhno-sosredotochitsya-fd)
+https://github.com/familiarwhisker/slozhno-sosredotochitsya-fd
