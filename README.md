@@ -1,1 +1,1 @@
-https://github.com/familiarwhisker/slozhno-sosredotochitsya
+(https://github.com/username/slozhno-sosredotochitsya-fd)
