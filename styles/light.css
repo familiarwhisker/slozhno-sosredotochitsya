@@ -18,6 +18,7 @@
   --decorative-element-text: none;
   --page-bg-image: url("../images/cover-image-light.png");
   --banner-title-color: #FFC2E6;
+  --button-outline-color: rgba(53, 52, 48, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,5 +32,6 @@
     --decorative-element-text: none;
     --page-bg-image: url("../images/cover-image-light.png");
     --banner-title-color: #FFC2E6;
+    --button-outline-color: rgba(53, 52, 48, 0.4);
   }
 }

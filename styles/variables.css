@@ -15,4 +15,5 @@
   --letter-spacing-main: 0.01rem;
   --decorative-element-text: block;
   --page-bg-image: url("../images/cover-image-dark.png");
+  --button-outline-color: rgba(255, 0, 112, 0.4);
 }
